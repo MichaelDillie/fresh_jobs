@@ -36,64 +36,177 @@ body {
 #AppCom {
   overflow: hidden;
   margin-top: 1em; }
-
-.inputComponent {
-  font-family: sans-serif;
-  float: left;
-  margin-left: 8%;
-  margin-right: 3%;
-  background-color: #fff;
-  width: 50%;
-  padding-left: 2%;
-  height: 37em;
-  box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.35); }
-  .inputComponent .labels {
-    margin: 0; }
-  .inputComponent input {
-    margin-bottom: .75em;
-    width: 94%;
-    height: 2em;
-    margin-top: .25em;
-    outline: none;
-    font-size: 1em; }
-  .inputComponent textarea {
-    margin-bottom: .75em;
-    width: 94%;
-    height: 9em;
-    margin-top: .25em;
-    outline: none;
-    font-size: 1em; }
-  .inputComponent .button-area {
-    width: 94%; }
-    .inputComponent .button-area button {
-      display: block;
+  #AppCom .inputComponent {
+    font-family: sans-serif;
+    float: left;
+    margin-left: 8%;
+    margin-right: 3%;
+    background-color: #fff;
+    width: 50%;
+    padding-left: 2%;
+    height: 37em;
+    box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.35); }
+    #AppCom .inputComponent .labels {
+      margin: 0; }
+    #AppCom .inputComponent input {
+      margin-bottom: .75em;
+      width: 94%;
+      height: 2em;
+      margin-top: .25em;
+      outline: none;
+      font-size: 1em; }
+    #AppCom .inputComponent textarea {
+      margin-bottom: .75em;
+      width: 94%;
+      height: 9em;
+      margin-top: .25em;
+      outline: none;
+      font-size: 1em; }
+    #AppCom .inputComponent .button-area {
+      width: 94%; }
+      #AppCom .inputComponent .button-area button {
+        display: block;
+        border: .1px solid;
+        border-radius: 3px;
+        background-color: #00A346;
+        color: #FCFBC0;
+        height: 5%;
+        font-size: 1em;
+        float: right;
+        outline: none;
+        cursor: pointer;
+        height: 2em; }
+  #AppCom .jobTips {
+    font-family: sans-serif;
+    float: left;
+    background-color: #fff;
+    width: 25%;
+    padding-right: 2%;
+    padding-left: 2%;
+    padding-bottom: 2%;
+    height: 36em; }
+    #AppCom .jobTips .title {
+      font-family: serif;
+      margin: 0;
+      margin-top: 1em;
+      font-size: 1.3em;
+      border-bottom: 1.5px solid #BBBBBB;
+      margin-bottom: 1em;
+      font-weight: bold; }
+    #AppCom .jobTips div {
+      margin-bottom: .5em; }
+  #AppCom .JobList {
+    width: 50%;
+    background-color: white;
+    margin-left: 10%;
+    padding-left: 2%;
+    padding-right: 2%;
+    padding-top: 2%;
+    margin-right: 2%;
+    box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.35);
+    float: left; }
+    #AppCom .JobList .filterBox .keywordWrapper {
+      display: inline-block;
+      margin-right: 2%;
+      margin-left: 2%;
+      margin-bottom: 1.5em; }
+      #AppCom .JobList .filterBox .keywordWrapper input {
+        font-size: 1em;
+        width: 100%;
+        outline: none; }
+    #AppCom .JobList .filterBox .locatinWrapper {
+      display: inline-block;
+      margin-right: 2%; }
+      #AppCom .JobList .filterBox .locatinWrapper input {
+        font-size: 1em;
+        width: 100%;
+        outline: none; }
+    #AppCom .JobList .filterBox button {
       border: .1px solid;
       border-radius: 3px;
       background-color: #00A346;
       color: #FCFBC0;
       height: 5%;
       font-size: 1em;
-      float: right;
       outline: none;
-      cursor: pointer;
-      height: 2em; }
-
-.jobTips {
-  font-family: sans-serif;
-  float: left;
-  background-color: #fff;
-  width: 25%;
-  padding-right: 2%;
-  padding-left: 2%;
-  padding-bottom: 2%;
-  height: 36em; }
-  .jobTips .title {
-    font-family: serif;
-    margin: 0;
+      cursor: pointer; }
+  #AppCom .jobRow {
     margin-top: 1em;
-    font-size: 1.3em;
-    border-bottom: 1.5px solid grey;
-    margin-bottom: 1em;
-    font-weight: bold; }
-  .jobTips div {
-    margin-bottom: .5em; }
+    border-top: 1px solid #BBBBBB; }
+    #AppCom .jobRow .title {
+      color: green;
+      font-size: 1.5em; }
+    #AppCom .jobRow .date {
+      color: #BBBBBB;
+      float: right; }
+    #AppCom .jobRow div {
+      margin-top: .25em; }
+      #AppCom .jobRow div .company {
+        margin-top: .5em; }
+      #AppCom .jobRow div .location {
+        margin-top: .5em; }
+    #AppCom .jobRow .description {
+      color: #BBBBBB;
+      margin-top: .25em; }
+    #AppCom .jobRow .tags {
+      margin-top: .5em;
+      width: 4.7em;
+      background-color: #FFEC67;
+      border: 1px solid #B0B000;
+      padding-left: .5em;
+      margin-bottom: .75em; }
+  #AppCom .infoBox {
+    background-color: #F9FCE8;
+    float: left;
+    border: 2px solid #E2F0AC;
+    width: 20%;
+    padding-right: 2%;
+    padding-left: 2%; }
+    #AppCom .infoBox .title {
+      margin-top: 1em;
+      font-size: 1.3em;
+      border-bottom: 1.5px solid #BBBBBB; }
+    #AppCom .infoBox div {
+      margin-top: 1em;
+      margin-bottom: 1em; }
+    #AppCom .infoBox li {
+      margin-bottom: .25em; }
+    #AppCom .infoBox .btn {
+      text-align: center; }
+      #AppCom .infoBox .btn button {
+        margin-top: 1em;
+        border: 0 solid transparent;
+        background-color: #666666;
+        color: #F1F1F1;
+        border-radius: 2px;
+        font-size: 1.3em;
+        margin-left: 7em;
+        cursor: pointer;
+        margin: 0 auto;
+        outline: none;
+        margin-bottom: .25em; }
+  #AppCom .FeaturedCompany {
+    float: left;
+    background-color: white;
+    width: 20%;
+    padding-right: 2%;
+    padding-left: 2%;
+    border: 2px solid white;
+    margin-top: 3em;
+    text-align: center; }
+    #AppCom .FeaturedCompany .title {
+      font-size: 1.3em;
+      margin-top: 1em;
+      border-bottom: 1.5px solid #BBBBBB;
+      margin-bottom: 1em; }
+    #AppCom .FeaturedCompany .ImgWrapper {
+      text-align: center; }
+      #AppCom .FeaturedCompany .ImgWrapper .mainImg {
+        width: 100%; }
+    #AppCom .FeaturedCompany .MaxPlay {
+      font-size: 2.3em;
+      color: #00A246; }
+    #AppCom .FeaturedCompany .FeaturedLocation {
+      font-size: 1.1em;
+      color: #6D6D6D;
+      margin-bottom: 4em; }

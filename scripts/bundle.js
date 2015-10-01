@@ -32549,7 +32549,174 @@ module.exports = React.createClass({
 	}
 });
 
-},{"./JobInputComponent.js":161,"./JobTipsComponent.js":162,"react":159}],161:[function(require,module,exports){
+},{"./JobInputComponent.js":165,"./JobTipsComponent.js":168,"react":159}],161:[function(require,module,exports){
+'use strict';
+
+var React = require('react');
+
+var JobTipsComponent = require('./JobTipsComponent.js');
+var JobInputComponent = require('./JobInputComponent.js');
+var FilterBoxComponent = require('./FilterBoxComponent.js');
+var JobRowComponent = require('./JobRowComponent.js');
+var InfoBoxComponent = require('./InfoBoxComponent.js');
+
+module.exports = React.createClass({
+	displayName: 'exports',
+
+	render: function render() {
+		return React.createElement(
+			'div',
+			null,
+			React.createElement(
+				'div',
+				{ className: 'for-employers-page' },
+				React.createElement(JobInputComponent, null),
+				React.createElement(JobTipsComponent, null)
+			),
+			React.createElement(
+				'div',
+				{ className: 'jobs-page' },
+				React.createElement(FilterBoxComponent, null),
+				React.createElement(InfoBoxComponent, null),
+				React.createElement(JobRowComponent, null),
+				React.createElement(JobRowComponent, null),
+				React.createElement(JobRowComponent, null)
+			)
+		);
+	}
+});
+
+},{"./FilterBoxComponent.js":163,"./InfoBoxComponent.js":164,"./JobInputComponent.js":165,"./JobRowComponent.js":167,"./JobTipsComponent.js":168,"react":159}],162:[function(require,module,exports){
+"use strict";
+
+var React = require('react');
+module.exports = React.createClass({
+	displayName: "exports",
+
+	render: function render() {
+		return React.createElement(
+			"div",
+			{ className: "FeaturedCompany" },
+			React.createElement(
+				"div",
+				{ className: "title" },
+				"Featured Company"
+			),
+			React.createElement(
+				"div",
+				{ className: "ImgWrapper" },
+				React.createElement("img", { src: "../images/featured.jpg", className: "mainImg" }),
+				React.createElement("img", { src: "../images/featured-logo.jpg", className: "mainLogo" })
+			),
+			React.createElement(
+				"div",
+				{ className: "MaxPlay" },
+				"MaxPlay"
+			),
+			React.createElement(
+				"div",
+				{ className: "FeaturedLocation" },
+				"Austin, TX"
+			)
+		);
+	}
+});
+
+},{"react":159}],163:[function(require,module,exports){
+"use strict";
+
+var React = require('react');
+module.exports = React.createClass({
+	displayName: "exports",
+
+	render: function render() {
+		return React.createElement(
+			"div",
+			{ className: "filterBox" },
+			React.createElement(
+				"div",
+				{ className: "keywordWrapper" },
+				React.createElement(
+					"div",
+					{ className: "keyword" },
+					"Keyword"
+				),
+				React.createElement("input", { type: "text" })
+			),
+			React.createElement(
+				"div",
+				{ className: "locatinWrapper" },
+				React.createElement(
+					"div",
+					{ className: "filter-location" },
+					"Location"
+				),
+				React.createElement("input", { type: "text" })
+			),
+			React.createElement(
+				"button",
+				null,
+				"Search"
+			)
+		);
+	}
+});
+
+},{"react":159}],164:[function(require,module,exports){
+"use strict";
+
+var React = require('react');
+module.exports = React.createClass({
+	displayName: "exports",
+
+	render: function render() {
+		return React.createElement(
+			"div",
+			{ className: "infoBox" },
+			React.createElement(
+				"div",
+				{ className: "title" },
+				"Looking for a job?"
+			),
+			React.createElement(
+				"div",
+				null,
+				"Create a Fresh Job profile and ",
+				React.createElement(
+					"strong",
+					null,
+					"let employers come to you."
+				)
+			),
+			React.createElement(
+				"li",
+				null,
+				"Employers search our database and contact you"
+			),
+			React.createElement(
+				"li",
+				null,
+				"Import easily from LinkedIn"
+			),
+			React.createElement(
+				"li",
+				null,
+				"Link to Stack Overflow, GitHub, CodePlex and more"
+			),
+			React.createElement(
+				"div",
+				{ className: "btn" },
+				React.createElement(
+					"button",
+					null,
+					"Create a Profile"
+				)
+			)
+		);
+	}
+});
+
+},{"react":159}],165:[function(require,module,exports){
 "use strict";
 
 var React = require('react');
@@ -32608,7 +32775,95 @@ module.exports = React.createClass({
 	}
 });
 
-},{"react":159}],162:[function(require,module,exports){
+},{"react":159}],166:[function(require,module,exports){
+'use strict';
+
+var React = require('react');
+
+var FilterBoxComponent = require('./FilterBoxComponent.js');
+var JobRowComponent = require('./JobRowComponent.js');
+var InfoBoxComponent = require('./InfoBoxComponent.js');
+var FeaturedCompanyComponent = require('./FeaturedCompanyComponent.js');
+
+module.exports = React.createClass({
+	displayName: 'exports',
+
+	render: function render() {
+		return React.createElement(
+			'div',
+			null,
+			React.createElement(
+				'div',
+				{ className: 'JobList' },
+				React.createElement(FilterBoxComponent, null),
+				React.createElement(JobRowComponent, null),
+				React.createElement(JobRowComponent, null),
+				React.createElement(JobRowComponent, null)
+			),
+			React.createElement(
+				'div',
+				{ className: 'InfoBox' },
+				React.createElement(InfoBoxComponent, null),
+				React.createElement(FeaturedCompanyComponent, null)
+			)
+		);
+	}
+});
+
+},{"./FeaturedCompanyComponent.js":162,"./FilterBoxComponent.js":163,"./InfoBoxComponent.js":164,"./JobRowComponent.js":167,"react":159}],167:[function(require,module,exports){
+"use strict";
+
+var React = require('react');
+module.exports = React.createClass({
+	displayName: "exports",
+
+	render: function render() {
+		return React.createElement(
+			"div",
+			{ className: "jobRow" },
+			React.createElement(
+				"div",
+				null,
+				React.createElement(
+					"span",
+					{ className: "title" },
+					"Junior Frontend Dev"
+				),
+				React.createElement(
+					"span",
+					{ className: "date" },
+					"yesterday"
+				)
+			),
+			React.createElement(
+				"div",
+				null,
+				React.createElement(
+					"span",
+					{ className: "company" },
+					"ESO •"
+				),
+				React.createElement(
+					"span",
+					{ className: "location" },
+					" Austin, TX"
+				)
+			),
+			React.createElement(
+				"div",
+				{ className: "description" },
+				"Looking for a junior frontend dev. fluent in JavaScript, jQuery, Backbone, and React."
+			),
+			React.createElement(
+				"div",
+				{ className: "tags" },
+				"JavaScript"
+			)
+		);
+	}
+});
+
+},{"react":159}],168:[function(require,module,exports){
 "use strict";
 
 var React = require('react');
@@ -32672,13 +32927,13 @@ module.exports = React.createClass({
 					null,
 					"Discuss Compensations."
 				),
-				" Even though you may not want to give an exact compensation, give a range. Make sure to point out any bonuses, commissions, or nonmonetary compensation, as well"
+				" Even though you may not want to give an exact compensation, give a range. Make sure to point out any bonuses, commissions, or nonmonetary compensation, as well."
 			)
 		);
 	}
 });
 
-},{"react":159}],163:[function(require,module,exports){
+},{"react":159}],169:[function(require,module,exports){
 "use strict";
 
 var React = require('react');
@@ -32748,18 +33003,20 @@ module.exports = React.createClass({
 	}
 });
 
-},{"react":159}],164:[function(require,module,exports){
+},{"react":159}],170:[function(require,module,exports){
 'use strict';
 var $ = require('jquery');
 var Backbone = require('backbone');
 var React = require('react');
 
 var AppComponent = require('./components/AppComponent.js');
+var JobListComponent = require('./components/JobListComponent.js');
+var AddJobComponent = require('./components/AddJobComponent.js');
 var NavComponent = require('./components/NavComponent.js');
 
 //*****For Employers Page*****
-var jobTips = document.getElementById('jobTips');
-var inputComponent = document.getElementById('inputComponent');
+var Nav = document.getElementById('Nav');
+var AppCom = document.getElementById('AppCom');
 
 React.render(React.createElement(
 	'div',
@@ -32767,25 +33024,25 @@ React.render(React.createElement(
 	React.createElement(NavComponent, null)
 ), Nav);
 
-React.render(React.createElement(
-	'div',
-	null,
-	React.createElement(AppComponent, null)
-), AppCom);
-
 var Router = Backbone.Router.extend({
 
 	routes: {
-		'For-Employers': 'onForEmployersLink'
+		'For-Employers': 'onForEmployersLink',
+		'Jobs': 'onJobs'
 	},
 
 	onForEmployersLink: function onForEmployersLink() {
-		jobTips.show();
-		inputComponent.show();
+		React.render(React.createElement(AddJobComponent, null), AppCom);
+	},
+	onJobs: function onJobs() {
+		React.render(React.createElement(JobListComponent, null), AppCom);
 	}
 });
 
-},{"./components/AppComponent.js":160,"./components/NavComponent.js":163,"backbone":1,"jquery":4,"react":159}]},{},[164])
+var r = new Router();
+Backbone.history.start();
+
+},{"./components/AddJobComponent.js":160,"./components/AppComponent.js":161,"./components/JobListComponent.js":166,"./components/NavComponent.js":169,"backbone":1,"jquery":4,"react":159}]},{},[170])
 
 
 //# sourceMappingURL=bundle.js.map
