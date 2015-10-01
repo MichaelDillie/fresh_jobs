@@ -1,0 +1,99 @@
+a {
+  text-decoration: none;
+  color: grey; }
+
+body {
+  background-image: url("../images/bodyBG.jpg");
+  margin: 0; }
+
+#Nav {
+  border-top: 1em solid grey;
+  background-color: white;
+  height: 4em; }
+  #Nav .nav {
+    font-family: sans-serif;
+    max-width: 790px;
+    margin: 0 auto; }
+    #Nav .nav img {
+      height: 3em;
+      width: 3em;
+      margin-right: .5em;
+      float: left;
+      margin-top: .5em; }
+    #Nav .nav .company-name {
+      font-size: 1.5em;
+      font-weight: bold;
+      margin-right: 2em;
+      color: black;
+      float: left;
+      margin-top: .75em; }
+    #Nav .nav .nav-links {
+      margin-right: 1em;
+      float: left;
+      margin-top: 1.5em;
+      font-weight: bold; }
+
+#AppCom {
+  overflow: hidden;
+  margin-top: 1em; }
+
+.inputComponent {
+  font-family: sans-serif;
+  float: left;
+  margin-left: 8%;
+  margin-right: 3%;
+  background-color: #fff;
+  width: 50%;
+  padding-left: 2%;
+  height: 37em;
+  box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.35); }
+  .inputComponent .labels {
+    margin: 0; }
+  .inputComponent input {
+    margin-bottom: .75em;
+    width: 94%;
+    height: 2em;
+    margin-top: .25em;
+    outline: none;
+    font-size: 1em; }
+  .inputComponent textarea {
+    margin-bottom: .75em;
+    width: 94%;
+    height: 9em;
+    margin-top: .25em;
+    outline: none;
+    font-size: 1em; }
+  .inputComponent .button-area {
+    width: 94%; }
+    .inputComponent .button-area button {
+      display: block;
+      border: .1px solid;
+      border-radius: 3px;
+      background-color: #00A346;
+      color: #FCFBC0;
+      height: 5%;
+      font-size: 1em;
+      float: right;
+      outline: none;
+      cursor: pointer;
+      height: 2em; }
+
+.jobTips {
+  font-family: sans-serif;
+  float: left;
+  background-color: #fff;
+  width: 25%;
+  padding-right: 2%;
+  padding-left: 2%;
+  padding-bottom: 2%;
+  height: 36em; }
+  .jobTips .title {
+    font-family: serif;
+    margin: 0;
+    margin-top: 1em;
+    font-size: 1.3em;
+    border-bottom: 1.5px solid grey;
+    margin-bottom: 1em;
+    font-weight: bold; }
+  .jobTips div {
+    margin-bottom: .5em; }
