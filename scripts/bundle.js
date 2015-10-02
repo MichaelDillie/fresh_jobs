@@ -32549,7 +32549,7 @@ module.exports = React.createClass({
 	}
 });
 
-},{"./JobInputComponent.js":165,"./JobTipsComponent.js":168,"react":159}],161:[function(require,module,exports){
+},{"./JobInputComponent.js":167,"./JobTipsComponent.js":170,"react":159}],161:[function(require,module,exports){
 'use strict';
 
 var React = require('react');
@@ -32586,7 +32586,7 @@ module.exports = React.createClass({
 	}
 });
 
-},{"./FilterBoxComponent.js":163,"./InfoBoxComponent.js":164,"./JobInputComponent.js":165,"./JobRowComponent.js":167,"./JobTipsComponent.js":168,"react":159}],162:[function(require,module,exports){
+},{"./FilterBoxComponent.js":163,"./InfoBoxComponent.js":164,"./JobInputComponent.js":167,"./JobRowComponent.js":169,"./JobTipsComponent.js":170,"react":159}],162:[function(require,module,exports){
 "use strict";
 
 var React = require('react');
@@ -32720,6 +32720,77 @@ module.exports = React.createClass({
 "use strict";
 
 var React = require('react');
+
+module.exports = React.createClass({
+	displayName: "exports",
+
+	render: function render() {
+		return React.createElement(
+			"div",
+			{ className: "JobDetails" },
+			React.createElement(
+				"div",
+				{ className: "title" },
+				"Junior Frontend Dev"
+			),
+			React.createElement(
+				"div",
+				null,
+				React.createElement(
+					"span",
+					{ className: "company" },
+					"ESO Solutions •"
+				),
+				React.createElement(
+					"span",
+					{ className: "location" },
+					" Austin, TX"
+				)
+			),
+			React.createElement(
+				"div",
+				{ className: "tags" },
+				"JavaScript"
+			),
+			React.createElement(
+				"div",
+				{ className: "JobDescription" },
+				"Job Description"
+			),
+			React.createElement(
+				"div",
+				{ className: "description" },
+				"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent convallis tincidunt mauris ac malesuada. Mauris venenatis tincidunt orci et dapibus. Morbi cursus urna sit amet lacus posuere ornare. Cras pharetra enim mauris, vel varius metus pulvinar tempus. Sed mollis, erat sed aliquam ultrices, lorem ligula pretium ipsum, ac gravida quam leo eget dui. Quisque sed nulla in dolor scelerisque aliquam. Duis congue, libero pretium dictum consequat, mi urna mollis tellus, vel interdum quam tellus non velit. Donec eget congue odio, ut laoreet arcu. Aenean vitae purus faucibus, blandit ante at, convallis lacus. Suspendisse non massa et nisi venenatis vehicula. Suspendisse eu nulla placerat, varius dui nec, cursus diam. Proin et enim tempus, venenatis sem in, condimentum nibh. Cras ornare nec ex nec tempus. Fusce in lacus rutrum, tempus nulla vel, placerat nibh. Phasellus eget felis quam. Interdum et malesuada fames ac ante ipsum primis in faucibus. Morbi fringilla, nibh vitae dictum luctus, ante nibh tincidunt urna, sed gravida ipsum sem at sapien. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Cras erat est, imperdiet vitae hendrerit sed, efficitur in nulla. Phasellus nulla risus, ultricies vel porta vitae, dignissim eu sapien. Proin id justo nec neque ultrices lobortis quis ac velit. Vivamus nec vehicula tortor. Duis ac consequat dui. Morbi ac mauris quam. Proin at pretium risus. Nam pellentesque metus et sem euismod, vel lacinia augue dictum. Cras aliquam posuere nulla nec ornare. Donec nisl nulla, pharetra ut magna sed, cursus euismod elit. Ut a mollis ante. Donec gravida erat purus. Duis purus lectus, tristique a tristique non, semper non eros. Aliquam volutpat fringilla neque vitae gravida. Integer consequat vestibulum congue. Aenean rhoncus eget libero eu ornare. Aenean accumsan eros nec scelerisque dapibus. Quisque suscipit tempus tempor. Mauris sit amet hendrerit nisi, posuere lacinia ipsum. Nulla congue odio nec turpis convallis, a euismod nisl tristique. Etiam aliquam sapien ac turpis blandit fermentum. Praesent ac felis vel magna pretium vulputate. Nam maximus sem non accumsan imperdiet. Aliquam erat volutpat. Mauris pharetra tortor at lacus sagittis mollis. Nulla scelerisque porttitor pharetra."
+			)
+		);
+	}
+});
+
+},{"react":159}],166:[function(require,module,exports){
+'use strict';
+
+var React = require('react');
+
+var JobDetailsComponent = require('./JobDetailsComponent.js');
+var FeaturedCompanyComponent = require('./FeaturedCompanyComponent.js');
+
+module.exports = React.createClass({
+	displayName: 'exports',
+
+	render: function render() {
+		return React.createElement(
+			'div',
+			null,
+			React.createElement(JobDetailsComponent, null),
+			React.createElement(FeaturedCompanyComponent, null)
+		);
+	}
+});
+
+},{"./FeaturedCompanyComponent.js":162,"./JobDetailsComponent.js":165,"react":159}],167:[function(require,module,exports){
+"use strict";
+
+var React = require('react');
 module.exports = React.createClass({
 	displayName: "exports",
 
@@ -32775,7 +32846,7 @@ module.exports = React.createClass({
 	}
 });
 
-},{"react":159}],166:[function(require,module,exports){
+},{"react":159}],168:[function(require,module,exports){
 'use strict';
 
 var React = require('react');
@@ -32810,7 +32881,7 @@ module.exports = React.createClass({
 	}
 });
 
-},{"./FeaturedCompanyComponent.js":162,"./FilterBoxComponent.js":163,"./InfoBoxComponent.js":164,"./JobRowComponent.js":167,"react":159}],167:[function(require,module,exports){
+},{"./FeaturedCompanyComponent.js":162,"./FilterBoxComponent.js":163,"./InfoBoxComponent.js":164,"./JobRowComponent.js":169,"react":159}],169:[function(require,module,exports){
 "use strict";
 
 var React = require('react');
@@ -32825,9 +32896,13 @@ module.exports = React.createClass({
 				"div",
 				null,
 				React.createElement(
-					"span",
-					{ className: "title" },
-					"Junior Frontend Dev"
+					"a",
+					{ href: "#Details" },
+					React.createElement(
+						"span",
+						{ className: "title" },
+						"Junior Frontend Dev"
+					)
 				),
 				React.createElement(
 					"span",
@@ -32863,7 +32938,7 @@ module.exports = React.createClass({
 	}
 });
 
-},{"react":159}],168:[function(require,module,exports){
+},{"react":159}],170:[function(require,module,exports){
 "use strict";
 
 var React = require('react');
@@ -32933,7 +33008,7 @@ module.exports = React.createClass({
 	}
 });
 
-},{"react":159}],169:[function(require,module,exports){
+},{"react":159}],171:[function(require,module,exports){
 "use strict";
 
 var React = require('react');
@@ -33003,7 +33078,7 @@ module.exports = React.createClass({
 	}
 });
 
-},{"react":159}],170:[function(require,module,exports){
+},{"react":159}],172:[function(require,module,exports){
 'use strict';
 var $ = require('jquery');
 var Backbone = require('backbone');
@@ -33012,6 +33087,7 @@ var React = require('react');
 var AppComponent = require('./components/AppComponent.js');
 var JobListComponent = require('./components/JobListComponent.js');
 var AddJobComponent = require('./components/AddJobComponent.js');
+var JobDetailsPageComponent = require('./components/JobDetailsPageComponent.js');
 var NavComponent = require('./components/NavComponent.js');
 
 //*****For Employers Page*****
@@ -33028,7 +33104,8 @@ var Router = Backbone.Router.extend({
 
 	routes: {
 		'For-Employers': 'onForEmployersLink',
-		'Jobs': 'onJobs'
+		'Jobs': 'onJobs',
+		'Details': 'onDetails'
 	},
 
 	onForEmployersLink: function onForEmployersLink() {
@@ -33036,13 +33113,16 @@ var Router = Backbone.Router.extend({
 	},
 	onJobs: function onJobs() {
 		React.render(React.createElement(JobListComponent, null), AppCom);
+	},
+	onDetails: function onDetails() {
+		React.render(React.createElement(JobDetailsPageComponent, null), AppCom);
 	}
 });
 
 var r = new Router();
 Backbone.history.start();
 
-},{"./components/AddJobComponent.js":160,"./components/AppComponent.js":161,"./components/JobListComponent.js":166,"./components/NavComponent.js":169,"backbone":1,"jquery":4,"react":159}]},{},[170])
+},{"./components/AddJobComponent.js":160,"./components/AppComponent.js":161,"./components/JobDetailsPageComponent.js":166,"./components/JobListComponent.js":168,"./components/NavComponent.js":171,"backbone":1,"jquery":4,"react":159}]},{},[172])
 
 
 //# sourceMappingURL=bundle.js.map

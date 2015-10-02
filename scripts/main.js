@@ -6,6 +6,7 @@ var React = require('react');
 var AppComponent = require('./components/AppComponent.js');
 var JobListComponent = require('./components/JobListComponent.js');
 var AddJobComponent = require('./components/AddJobComponent.js');
+var JobDetailsPageComponent = require('./components/JobDetailsPageComponent.js');
 var NavComponent = require('./components/NavComponent.js');
 
 //*****For Employers Page*****
@@ -24,7 +25,8 @@ var Router = Backbone.Router.extend({
 
 	routes: {
 		'For-Employers': 'onForEmployersLink',
-		'Jobs': 'onJobs'
+		'Jobs': 'onJobs',
+		'Details': 'onDetails'
 	},
 
 	onForEmployersLink: function() {
@@ -37,7 +39,13 @@ var Router = Backbone.Router.extend({
 		React.render (
 			<JobListComponent />,
 			AppCom
-		)
+		);
+	},
+	onDetails: function() {
+		React.render (
+			<JobDetailsPageComponent />,
+			AppCom
+		);
 	}
 });
 

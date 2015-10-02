@@ -237,6 +237,7 @@ body {
     		margin-top: 1em;
     		border-bottom: 1.5px solid #BBBBBB;
     		margin-bottom: 1em;
+    		text-align: left;
     	}
     	.ImgWrapper {
     		text-align: center;
@@ -256,4 +257,79 @@ body {
     		margin-bottom: 4em;
     	}
     }
+    .JobDetails {
+    	width: 50%;
+        background-color: white;
+        margin-left: 10%;
+        padding-left: 2%;
+        padding-right: 2%;
+        padding-top: 2%;
+        margin-right: 2%;
+        box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.35);
+        float: left;
+        .title {
+        	color: green;
+            font-size: 1.5em;
+        }
+        div {
+        	margin-top: .25em;
+        	.company {
+        		margin-top: .5em;
+        	}
+        	.location {
+        		margin-top: .5em;
+        	}
+        }
+        .tags {
+            margin-top: .5em;
+            width: 4.7em;
+            background-color: #FFEC67;
+            border: 1px solid #B0B000;
+            padding-left: .5em;
+            margin-bottom: .75em;
+        }
+        .JobDescription {
+        	margin-bottom: 0;
+        	font-size: 1.5em;
+        }
+		.description {
+			border-top: 2px solid #BBBBBB;
+			padding-top: 1em;
+			padding-bottom: 2em;
+		}
+    }
+}
+.FeaturedCompany {
+	float: left;
+	background-color: white;
+	width: 20%;
+	padding-right: 2%;
+	padding-left: 2%;
+	border: 2px solid white;
+	margin-top: 1em;
+	text-align: center;
+	.title {
+		font-size: 1.3em;
+		margin-top: 1em;
+		border-bottom: 1.5px solid #BBBBBB;
+		margin-bottom: 1em;
+		text-align: left;
+	}
+	.ImgWrapper {
+		text-align: center;
+    	.mainImg {
+    		width: 100%;
+    	}
+    	.mainLogo {
+    	}
+    }
+	.MaxPlay {
+		font-size: 2.3em;
+		color: #00A246;
+	}
+	.FeaturedLocation {
+		font-size: 1.1em;
+		color: #6D6D6D;
+		margin-bottom: 4em;
+	}
 }

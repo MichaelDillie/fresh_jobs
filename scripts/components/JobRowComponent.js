@@ -4,7 +4,9 @@ module.exports = React.createClass({
 		return(
 			<div className="jobRow">
 				<div>
-					<span className="title">Junior Frontend Dev</span>
+					<a href="#Details">
+						<span className="title">Junior Frontend Dev</span>
+					</a>
 					<span className="date">yesterday</span>
 				</div>
 				<div>
