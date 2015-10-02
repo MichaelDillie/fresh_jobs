@@ -5,15 +5,15 @@ module.exports = React.createClass({
 			<div className="jobRow">
 				<div>
 					<a href="#Details">
-						<span className="title">Junior Frontend Dev</span>
+						<span className="title">{this.props.model.get('title')}</span>
 					</a>
-					<span className="date">yesterday</span>
+					<span className="date">{this.props.model.get('date')}</span>
 				</div>
 				<div>
-					<span className="company">ESO •</span>
-					<span className="location"> Austin, TX</span>
+					<span className="company">{this.props.model.get('companyName')}</span>
+					<span className="location">{this.props.model.get('location')}</span>
 				</div>
-				<div className="description">Looking for a junior frontend dev. fluent in JavaScript, jQuery, Backbone, and React.</div>
+				<div className="description">{this.props.model.get('description')}</div>
 				<div className="tags">JavaScript</div>
 			</div>
 		)

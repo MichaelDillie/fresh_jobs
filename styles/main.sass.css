@@ -151,7 +151,7 @@ body {
     #AppCom .jobRow .tags {
       margin-top: .5em;
       width: 4.7em;
-      background-color: #FFEC67;
+      background-color: #FFE5A8;
       border: 1px solid #B0B000;
       padding-left: .5em;
       margin-bottom: .75em; }
@@ -204,6 +204,9 @@ body {
       text-align: center; }
       #AppCom .FeaturedCompany .ImgWrapper .mainImg {
         width: 100%; }
+      #AppCom .FeaturedCompany .ImgWrapper .mainLogo {
+        position: relative;
+        bottom: 58px; }
     #AppCom .FeaturedCompany .MaxPlay {
       font-size: 2.3em;
       color: #00A246; }
@@ -233,7 +236,7 @@ body {
     #AppCom .JobDetails .tags {
       margin-top: .5em;
       width: 4.7em;
-      background-color: #FFEC67;
+      background-color: #FFE5A8;
       border: 1px solid #B0B000;
       padding-left: .5em;
       margin-bottom: .75em; }

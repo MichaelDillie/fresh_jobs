@@ -21,16 +21,16 @@ module.exports = React.createClass({
 				Suspendisse non massa et nisi venenatis vehicula. Suspendisse eu nulla placerat, varius dui nec, cursus diam.
 				Proin et enim tempus, venenatis sem in, condimentum nibh. Cras ornare nec ex nec tempus.
 				Fusce in lacus rutrum, tempus nulla vel, placerat nibh. Phasellus eget felis quam.
-				Interdum et malesuada fames ac ante ipsum primis in faucibus.
-
+				Interdum et malesuada fames ac ante ipsum primis in faucibus.<br />
+				<br />
 				Morbi fringilla, nibh vitae dictum luctus, ante nibh tincidunt urna, sed gravida ipsum sem at sapien.
 				Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Cras erat est, imperdiet vitae hendrerit sed, efficitur in nulla.
 				Phasellus nulla risus, ultricies vel porta vitae, dignissim eu sapien. Proin id justo nec neque ultrices lobortis quis ac velit.
 				Vivamus nec vehicula tortor. Duis ac consequat dui. Morbi ac mauris quam. Proin at pretium risus.
 				Nam pellentesque metus et sem euismod, vel lacinia augue dictum. Cras aliquam posuere nulla nec ornare.
 				Donec nisl nulla, pharetra ut magna sed, cursus euismod elit. Ut a mollis ante. Donec gravida erat purus.
-				Duis purus lectus, tristique a tristique non, semper non eros. Aliquam volutpat fringilla neque vitae gravida.
-
+				Duis purus lectus, tristique a tristique non, semper non eros. Aliquam volutpat fringilla neque vitae gravida.<br />
+				<br />
 				Integer consequat vestibulum congue. Aenean rhoncus eget libero eu ornare.
 				Aenean accumsan eros nec scelerisque dapibus. Quisque suscipit tempus tempor.
 				Mauris sit amet hendrerit nisi, posuere lacinia ipsum. Nulla congue odio nec turpis convallis, a euismod nisl tristique.

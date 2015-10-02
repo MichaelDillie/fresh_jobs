@@ -8,6 +8,7 @@ var JobListComponent = require('./components/JobListComponent.js');
 var AddJobComponent = require('./components/AddJobComponent.js');
 var JobDetailsPageComponent = require('./components/JobDetailsPageComponent.js');
 var NavComponent = require('./components/NavComponent.js');
+var jobInputCollection = require('./collections/jobInputCollection.js');
 
 //*****For Employers Page*****
 var Nav = document.getElementById('Nav');

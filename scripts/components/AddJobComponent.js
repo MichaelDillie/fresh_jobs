@@ -11,5 +11,5 @@ module.exports = React.createClass({
 				<JobTipsComponent />
 			</div>
 		);
-	}
+	},
 });
