@@ -32540,7 +32540,19 @@ module.exports = Backbone.Collection.extend({
 	url: 'http://jmingus-server.herokuapp.com/collections/freshJobs'
 });
 
-},{"../models/jobInputModel.js":174,"backbone":1}],161:[function(require,module,exports){
+},{"../models/jobInputModel.js":175,"backbone":1}],161:[function(require,module,exports){
+'use strict';
+
+var Backbone = require('backbone');
+
+var jobListModel = require('../models/jobListModel.js');
+
+module.exports = Backbone.Collection.extend({
+	model: jobListModel,
+	url: 'http://jmingus-server.herokuapp.com/collections/freshJobs'
+});
+
+},{"../models/jobListModel.js":176,"backbone":1}],162:[function(require,module,exports){
 'use strict';
 
 var React = require('react');
@@ -32561,7 +32573,7 @@ module.exports = React.createClass({
 	}
 });
 
-},{"./JobInputComponent.js":168,"./JobTipsComponent.js":171,"react":159}],162:[function(require,module,exports){
+},{"./JobInputComponent.js":169,"./JobTipsComponent.js":172,"react":159}],163:[function(require,module,exports){
 'use strict';
 
 var React = require('react');
@@ -32598,7 +32610,7 @@ module.exports = React.createClass({
 	}
 });
 
-},{"./FilterBoxComponent.js":164,"./InfoBoxComponent.js":165,"./JobInputComponent.js":168,"./JobRowComponent.js":170,"./JobTipsComponent.js":171,"react":159}],163:[function(require,module,exports){
+},{"./FilterBoxComponent.js":165,"./InfoBoxComponent.js":166,"./JobInputComponent.js":169,"./JobRowComponent.js":171,"./JobTipsComponent.js":172,"react":159}],164:[function(require,module,exports){
 "use strict";
 
 var React = require('react');
@@ -32634,7 +32646,7 @@ module.exports = React.createClass({
 	}
 });
 
-},{"react":159}],164:[function(require,module,exports){
+},{"react":159}],165:[function(require,module,exports){
 "use strict";
 
 var React = require('react');
@@ -32674,7 +32686,7 @@ module.exports = React.createClass({
 	}
 });
 
-},{"react":159}],165:[function(require,module,exports){
+},{"react":159}],166:[function(require,module,exports){
 "use strict";
 
 var React = require('react');
@@ -32728,7 +32740,7 @@ module.exports = React.createClass({
 	}
 });
 
-},{"react":159}],166:[function(require,module,exports){
+},{"react":159}],167:[function(require,module,exports){
 "use strict";
 
 var React = require('react');
@@ -32784,7 +32796,7 @@ module.exports = React.createClass({
 	}
 });
 
-},{"react":159}],167:[function(require,module,exports){
+},{"react":159}],168:[function(require,module,exports){
 'use strict';
 
 var React = require('react');
@@ -32805,7 +32817,7 @@ module.exports = React.createClass({
 	}
 });
 
-},{"./FeaturedCompanyComponent.js":163,"./JobDetailsComponent.js":166,"react":159}],168:[function(require,module,exports){
+},{"./FeaturedCompanyComponent.js":164,"./JobDetailsComponent.js":167,"react":159}],169:[function(require,module,exports){
 'use strict';
 
 var React = require('react');
@@ -32880,7 +32892,7 @@ module.exports = React.createClass({
 	}
 });
 
-},{"../collections/jobInputCollection.js":160,"react":159}],169:[function(require,module,exports){
+},{"../collections/jobInputCollection.js":160,"react":159}],170:[function(require,module,exports){
 'use strict';
 
 var React = require('react');
@@ -32889,15 +32901,23 @@ var FilterBoxComponent = require('./FilterBoxComponent.js');
 var JobRowComponent = require('./JobRowComponent.js');
 var InfoBoxComponent = require('./InfoBoxComponent.js');
 var FeaturedCompanyComponent = require('./FeaturedCompanyComponent.js');
-var jobListModel = require('../models/jobListModel.js');
-
-var fakeList1 = new jobListModel({ id: 1, title: 'Junior Frontend Dev', date: 'yesterday', companyName: 'ESO Solutions', location: 'Austin, TX', description: 'Looking for a junior frontend dev. fluent in JavaScript, jQuery, Backbone, and React.' });
-var fakeList2 = new jobListModel({ id: 2, title: 'Senior Frontend Dev', date: 'yesterday', companyName: 'Google', location: 'Austin, TX', description: 'Looking for a senior frontend dev. fluent in JavaScript, jQuery, Backbone, and React.' });
+var jobRowCollection = require('../collections/jobRowCollection.js');
+var jobRow = new jobRowCollection();
 
 module.exports = React.createClass({
 	displayName: 'exports',
 
+	componentWillMount: function componentWillMount() {
+		var that = this;
+		jobRow.fetch();
+		jobRow.on('sync', function () {
+			that.forceUpdate();
+		});
+	},
 	render: function render() {
+		var allJobs = jobRow.map(function (model) {
+			return React.createElement(JobRowComponent, { job: model });
+		});
 		return React.createElement(
 			'div',
 			null,
@@ -32905,8 +32925,7 @@ module.exports = React.createClass({
 				'div',
 				{ className: 'JobList' },
 				React.createElement(FilterBoxComponent, null),
-				React.createElement(JobRowComponent, { model: fakeList1 }),
-				React.createElement(JobRowComponent, { model: fakeList2 })
+				allJobs
 			),
 			React.createElement(
 				'div',
@@ -32914,68 +32933,72 @@ module.exports = React.createClass({
 				React.createElement(InfoBoxComponent, null),
 				React.createElement(FeaturedCompanyComponent, null)
 			)
-		);Name;
+		);
 	}
 });
 
-},{"../models/jobListModel.js":175,"./FeaturedCompanyComponent.js":163,"./FilterBoxComponent.js":164,"./InfoBoxComponent.js":165,"./JobRowComponent.js":170,"react":159}],170:[function(require,module,exports){
-"use strict";
+},{"../collections/jobRowCollection.js":161,"./FeaturedCompanyComponent.js":164,"./FilterBoxComponent.js":165,"./InfoBoxComponent.js":166,"./JobRowComponent.js":171,"react":159}],171:[function(require,module,exports){
+'use strict';
 
 var React = require('react');
+
+var jobListModel = require('../models/jobListModel.js');
+var jobList = new jobListModel();
+
 module.exports = React.createClass({
-	displayName: "exports",
+	displayName: 'exports',
 
 	render: function render() {
 		return React.createElement(
-			"div",
-			{ className: "jobRow" },
+			'div',
+			{ className: 'jobRow' },
 			React.createElement(
-				"div",
+				'div',
 				null,
 				React.createElement(
-					"a",
-					{ href: "#Details" },
+					'a',
+					{ href: '#Details' },
 					React.createElement(
-						"span",
-						{ className: "title" },
-						this.props.model.get('title')
+						'span',
+						{ className: 'title', ref: 'title' },
+						this.props.job.get('title')
 					)
 				),
 				React.createElement(
-					"span",
-					{ className: "date" },
-					this.props.model.get('date')
+					'span',
+					{ className: 'date', ref: 'date' },
+					this.props.job.get('date')
 				)
 			),
 			React.createElement(
-				"div",
+				'div',
 				null,
 				React.createElement(
-					"span",
-					{ className: "company" },
-					this.props.model.get('companyName')
+					'span',
+					{ className: 'company', ref: 'companyName' },
+					this.props.job.get('companyName') + ' - '
 				),
 				React.createElement(
-					"span",
-					{ className: "location" },
-					this.props.model.get('location')
+					'span',
+					{ className: 'location', ref: 'location' },
+					this.props.job.get('location')
 				)
 			),
 			React.createElement(
-				"div",
-				{ className: "description" },
-				this.props.model.get('description')
+				'div',
+				{ className: 'description', ref: 'description' },
+				this.props.job.get('description')
 			),
 			React.createElement(
-				"div",
-				{ className: "tags" },
-				"JavaScript"
+				'div',
+				{ className: 'tags' },
+				'JavaScript'
 			)
 		);
 	}
 });
 
-},{"react":159}],171:[function(require,module,exports){
+},{"../models/jobListModel.js":176,"react":159}],172:[function(require,module,exports){
 "use strict";
 
 var React = require('react');
@@ -33045,7 +33068,7 @@ module.exports = React.createClass({
 	}
 });
 
-},{"react":159}],172:[function(require,module,exports){
+},{"react":159}],173:[function(require,module,exports){
 "use strict";
 
 var React = require('react');
@@ -33115,7 +33138,7 @@ module.exports = React.createClass({
 	}
 });
 
-},{"react":159}],173:[function(require,module,exports){
+},{"react":159}],174:[function(require,module,exports){
 'use strict';
 var $ = require('jquery');
 var Backbone = require('backbone');
@@ -33160,7 +33183,7 @@ var Router = Backbone.Router.extend({
 var r = new Router();
 Backbone.history.start();
 
-},{"./collections/jobInputCollection.js":160,"./components/AddJobComponent.js":161,"./components/AppComponent.js":162,"./components/JobDetailsPageComponent.js":167,"./components/JobListComponent.js":169,"./components/NavComponent.js":172,"backbone":1,"jquery":4,"react":159}],174:[function(require,module,exports){
+},{"./collections/jobInputCollection.js":160,"./components/AddJobComponent.js":162,"./components/AppComponent.js":163,"./components/JobDetailsPageComponent.js":168,"./components/JobListComponent.js":170,"./components/NavComponent.js":173,"backbone":1,"jquery":4,"react":159}],175:[function(require,module,exports){
 'use strict';
 
 var Backbone = require('backbone');
@@ -33177,7 +33200,7 @@ module.exports = Backbone.Model.extend({
 	idAttribute: '_id'
 });
 
-},{"backbone":1}],175:[function(require,module,exports){
+},{"backbone":1}],176:[function(require,module,exports){
 'use strict';
 
 var Backbone = require('backbone');
@@ -33190,10 +33213,12 @@ module.exports = Backbone.Model.extend({
 		companyName: '',
 		location: '',
 		description: ''
-	}
+	},
+	urlRoot: 'http://jmingus-server.herokuapp.com/collections/freshJobs',
+	idAttribute: '_id'
 });
 
-},{"backbone":1}]},{},[173])
+},{"backbone":1}]},{},[174])
 
 
 //# sourceMappingURL=bundle.js.map
